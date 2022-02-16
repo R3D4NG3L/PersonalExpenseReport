@@ -12,7 +12,8 @@
     - [Web App Url](#web-app-url)
     - [Google Spreadsheet Id](#google-spreadsheet-id)
   - [6. Update App Script Deployment](#6-update-app-script-deployment)
-  - [7. Enable Telegram Bot](#7-enable-telegram-bot)
+  - [7. Execute getMe and setWebhook functions](#7-execute-getme-and-setwebhook-functions)
+  - [8. Enable Telegram Bot](#8-enable-telegram-bot)
 
 # 🔎 Purpose
 The purpose of this open source software is to provide a solution to **personal expense report**.
@@ -141,7 +142,12 @@ After those personalization we need to update the App Script deployment.
   
 ![UpdateDeploy](./img/Screenshot12.png)
 
-## 7. Enable Telegram Bot
+## 7. Execute getMe and setWebhook functions
+After having deployed the script, you've to execute 'getMe' and 'setWebhook' functions from Google Apps Script
+![getMe](./img/Screenshot17.png)
+![setWebhook](./img/Screenshot18.png)
+
+## 8. Enable Telegram Bot
 Send a **chat to your personal telegram bot** create in step '[2. Create a Telegram Bot](#2-create-a-telegram-bot)' **with any text**
 
 **The bot will reply with:**
