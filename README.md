@@ -11,6 +11,8 @@
     - [Telegram Token](#telegram-token)
     - [Web App Url](#web-app-url)
     - [Google Spreadsheet Id](#google-spreadsheet-id)
+    - [Locale Settings](#locale-settings)
+    - [Timezone Settings](#timezone-settings)
   - [6. Update App Script Deployment](#6-update-app-script-deployment)
   - [7. Execute getMe and setWebhook functions](#7-execute-getme-and-setwebhook-functions)
   - [8. Enable Telegram Bot](#8-enable-telegram-bot)
@@ -130,6 +132,32 @@ Insert the **Google Spreedsheet Id** saved in step '[1. Copy Google Spreadsheet]
  *        (e.g. 1f_IT_kAFIG0TUOZyXL3nW67fxvd0fuSaw6gbAbtxzEo)
  */
 var ssId = "1f_IT_kAFIG0TUOZyXL3nW67fxvd0fuSaw6gbAbtxzEo";
+```
+
+### Locale Settings
+Insert the **locale settings** according to your preferences:
+
+```
+/**
+ * @var locale
+ * @brief 4. Set your locale for date time parsing
+ *           e.g. it-IT
+ *           e.g. en-US
+ */
+ var locale = "en-US";
+```
+
+### Timezone Settings
+Insert the **timezone settings** according to your preferences:
+
+```
+ /**
+  * @var timeZone
+  * @brief 5. Set your timezone for proper date formatting
+  *           e.g. "Europe/Rome"
+  *           e.g. "America/New_York"
+  */
+ var timeZone = "America/New_York";
 ```
 
 ## 6. Update App Script Deployment
