@@ -42,8 +42,15 @@ var webAppUrl = "";
   */
  var timeZone = "";
  /**
+  * @var currency
+  * @brief 6. Set your currency
+  *           e.g. "$"
+  *           e.g. "€"
+  */
+ var currency = "";
+ /**
   * @var adminID
-  * @brief 6. Admin Telegram Chat Id. 
+  * @brief 7. Admin Telegram Chat Id. 
   *           Used to debug in case of problems, error will be sent as a telegram message
   *           to the chat here mentioned.
   *           (e.g. 875276202)
@@ -207,10 +214,10 @@ var webAppUrl = "";
      var total = dashboardSheet.getRange(i, 2).getValue();
      if (total == "")
        continue;
-     expenses.push("\n<b>" + category + "</b>:  $ " + Number(total).toFixed(2));
+     expenses.push("\n<b>" + category + "</b>:  "+ currency +" " + Number(total).toFixed(2));
    }
    var expenseList = expenses.join("\n");
-   sendText(id, decodeURI("<b>Here are your total expenses:</b> <span class=\"tg-spoiler\">%0A " + expenseList) + "\n\n--------------------\n" + "<b><u>💵 TOTAL: $" + dashboardSheet.getRange(1, 4).getValue() + "</u></b></span>");
+   sendText(id, decodeURI("<b>Here are your total expenses:</b> <span class=\"tg-spoiler\">%0A " + expenseList) + "\n\n--------------------\n" + "<b><u>💵 TOTAL: " + currency + " " + dashboardSheet.getRange(1, 4).getValue() + "</u></b></span>");
    sendMainMenuKeyboard(id);
  }
  
@@ -240,7 +247,7 @@ var webAppUrl = "";
        + "🗓️ Date: <b>" + date
        + "</b>\n📋 Category: <b>" + category
        + "</b>\n🔎 Description: <b>" + description
-       + "</b>\n💸 Cost: <b>$ " + cost
+       + "</b>\n💸 Cost: <b>" + currency + " " + cost
        + "</b>\n🕵 Details: <b>" + detalis + "</b>");
      counter++;
      if (counter >= 5)
@@ -528,7 +535,7 @@ var webAppUrl = "";
      categoriesList.push(
        [
          {
-           "text": "🗑️ " + dateParsed + ": " + category + " - " + description + " - $ " + cost,
+           "text": "🗑️ " + dateParsed + ": " + category + " - " + description + " - " + currency + " " + cost,
            "callback_data": "deleteExpense" + i + "_" + dateNotParsed.getTime() + "_" + cost
          }
        ]
