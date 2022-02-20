@@ -13,6 +13,7 @@
     - [Google Spreadsheet Id](#google-spreadsheet-id)
     - [Locale Settings](#locale-settings)
     - [Timezone Settings](#timezone-settings)
+    - [Currency Settings](#currency-settings)
   - [6. Update App Script Deployment](#6-update-app-script-deployment)
   - [7. Execute getMe and setWebhook functions](#7-execute-getme-and-setwebhook-functions)
   - [8. Enable Telegram Bot](#8-enable-telegram-bot)
@@ -159,6 +160,19 @@ Insert the **timezone settings** according to your preferences:
   */
  var timeZone = "America/New_York";
 ```
+### Currency Settings
+Insert the **currency settings** according to your preferences:
+
+```
+ /**
+  * @var currency
+  * @brief 6. Set your currency
+  *           e.g. "$"
+  *           e.g. "€"
+  */
+ var currency = "$";
+```
+
 
 ## 6. Update App Script Deployment
 After those personalization we need to update the App Script deployment.
